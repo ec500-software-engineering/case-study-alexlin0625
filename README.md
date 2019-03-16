@@ -4,18 +4,24 @@ PROJECT: **ReactNative(Java/JS)**
 https://github.com/facebook/react-native
 
 # Technology and Platform used for development
-What coding languages are used? Do you think the same languages would be used if the project was started today? What languages would you use for the project if starting it today?
+### What coding languages are used? Do you think the same languages would be used if the project was started today? What languages would you use for the project if starting it today? 
 
-What build system is used (e.g. Bazel, CMake, Meson)? What build tools / environment are needed to build (e.g. does it require Visual Studio or just GCC or ?)
+### What build system is used (e.g. Bazel, CMake, Meson)? What build tools / environment are needed to build (e.g. does it require Visual Studio or just GCC or ?)
 
-What frameworks / libraries are used in the project? At least one of these projects don’t use any external libraries or explicit threading, yet is noted for being the fastest in its category--in that case, what intrinsic language techniques is it using to get this speed.
+
+
+### What frameworks / libraries are used in the project? At least one of these projects don’t use any external libraries or explicit threading, yet is noted for being the fastest in its category--in that case, what intrinsic language techniques is it using to get this speed.
+
+React Native is a framework based on JSX (extension to JavaScript), ES6 based syntax, state and props. It's also based on React which is Facebook's JavaScript library for fast building user interfaces. As understanding, this development tool targets mobile platforms instead of the browser. It not only provides rich features of UIs but also supports cross platform for both iOS and Android apps development.  
 
 # Testing: describe unit/integration/module tests and the test framework
 How are they ensuring the testing is meaningful? Do they have code coverage metrics for example?
 
-What CI platform(s) are they using (e.g. Travis-CI, AppVeyor)?
+### What CI platform(s) are they using (e.g. Travis-CI, AppVeyor)?
 
-What computing platform combinations are tested on their CI? E.g. Windows 10, Cygwin, Linux, Mac, GCC, Clang
+AppVeyor.
+
+### What computing platform combinations are tested on their CI? E.g. Windows 10, Cygwin, Linux, Mac, GCC, Clang
 
 # Software architecture
 How would you add / edit functionality if you wanted to? How would one use this project from external projects, or is it only usable as a standalone program?
