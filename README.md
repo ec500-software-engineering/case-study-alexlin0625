@@ -71,4 +71,4 @@ direct path to your project in either andriod studio or visual studio code, then
 react-native run-android
 ```
 build success image:
-![alt text]
+![alt text]https://github.com/ec500-software-engineering/case-study-alexlin0625/blob/master/Build_Successful.JPG
