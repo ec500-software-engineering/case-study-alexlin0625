@@ -41,7 +41,8 @@ Please make diagrams as appropriate for your explanation
 ### make a patch / pull request for the project to fix problem / add feature
 
 # Demonstration application of the system
-Since react-native provide broad API interfaces. I'd like to do a demo by accessing Goolge map in my react native app on an Android simulator. 
+Since react-native provide broad API interfaces. I'd like to do a demo by accessing Goolge map in my react native app on an Android simulator. Before start doing this application, obtaining google cloud platform account and Google Map API key is needed. Also make sure the <Maps SDK for Android> API was enabled in google cloud platform.
+
 ### Emulator choice:
 Name: Nexus_5X_API_28
 
@@ -71,4 +72,8 @@ direct path to your project in either andriod studio or visual studio code, then
 react-native run-android
 ```
 build success image:
-![alt text]https://github.com/ec500-software-engineering/case-study-alexlin0625/blob/master/Build_Successful.JPG
+![alt text](https://github.com/ec500-software-engineering/case-study-alexlin0625/blob/master/Build_Successful.JPG)
+
+React-Native-APP emulator result:
+
+![alt text](https://github.com/ec500-software-engineering/case-study-alexlin0625/blob/master/React-Native-App.JPG)
