@@ -6,8 +6,16 @@ https://github.com/facebook/react-native
 # Technology and Platform used for development
 ### What coding languages are used? Do you think the same languages would be used if the project was started today? What languages would you use for the project if starting it today? 
 
+Coding languages: Java and JavaScript
+
+ReactNative is powerful because they languages chosen are so far still the most well-established and used in industry. Java is an OOP programming language while Java Script is an OOP scripting language. Java creates applications that run in a virtual machine or browser while JavaScript code is run on a browser only. Since pretty much all Android apps are based on java and React along with Javascript can run even the most complex of apps smoothly, the combination gives huge potentials on developing any IoT or mobile devices appplications. On top of this, the JavaScript part of the code runs on its own thread, so your app’s UI animation won’t lag, no matter how heavy the compilations. 
+
+There's no doubt I'd choose to use Java and JavaScript to run on React Native even today especially for the CrossPlatform Compatibility on majority of React Native APIs. Even though each component will work on both Andriod and IOS, the instance has to be platform specific. When React Native package are downloaded. The package contains platform module and platform specific file extensions for Andriod and IOS, you can choose either edit the code on Vitual Studio or Andriod Studio in Andriod folder to start creating your React Native app. Respectively, develop your React Native App in IOS folder in Xcode.   
+
 ### What build system is used (e.g. Bazel, CMake, Meson)? What build tools / environment are needed to build (e.g. does it require Visual Studio or just GCC or ?)
 
+Expo CLI -> direct shoot to iphone.
+Visual Studio for app code, Android Studio for emulator -> because I do not have an andriod phone.
 
 ### What frameworks / libraries are used in the project? At least one of these projects don’t use any external libraries or explicit threading, yet is noted for being the fastest in its category--in that case, what intrinsic language techniques is it using to get this speed.
 
