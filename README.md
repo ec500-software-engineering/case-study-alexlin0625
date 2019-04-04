@@ -62,6 +62,61 @@ React Native is a framework based on JSX (extension to JavaScript), ES6 based sy
 # Testing: describe unit/integration/module tests and the test framework
 ### How are they ensuring the testing is meaningful? Do they have code coverage metrics for example?
 
+According to FaceBook's recommendations, Jest Framework plus some additional utilities liek Enzyme can optimizing unit testing especially we are writing code in JS. Facebook stated that using Jest has 5 reasons. Minimal configuration, watches only changed files, fast, snapshot testing and coverage out of box. Detailed Jest documentation and setup refers to https://facebook.github.io/jest/. Jest configuration is very easy to set up, fit the following code inside package.json from your React Native project completes the configuration. 
+```bash
+"jest": {
+    "preset": "react-native",
+    "cacheDirectory": "./cache",
+    "coveragePathIgnorePatterns": [
+      "./app/utils/vendor"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80
+      }
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!react-native|react-clone-referenced-element|react-navigation)"
+    ]
+  }
+```
+#### Snapshot testing:
+
+This testing is a configuration file defining your components' style, UI or props. Test case should look like following
+```bash
+import React from 'react';
+import renderer from 'react-test-renderer';
+import SomeComponent from '../SomeComponent.component';
+
+describe('Some component', () => {
+  it('renders correctly', () => {
+    const tree = renderer.create(
+      <SomeComponent/>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+```
+Whenever Jest sees this line expect(tree).toMatchSnapshot();, it is going to generate a snapshot and compare it with the previously stored snapshot. If the snapshot is not present, Jest will store the generated snap. While the screenshots don't mathc, the change you've done could be somehow unexpected or other erros need to be addressed. 
+
+#### Enzyme:
+
+While Snapshot testing focus more on external and visual changes, Enzyme is a JavaScript testing utility for React. The user can directly integrate Enzyme in the current Jest framework. There are three components to install, enzyme, jest-enzyme, enzyme-adapters.
+```bash
+yarn add enzyme jest-enzyme enzyme-adapter-react-16 enzyme-react-16-adapter-setup --dev
+```
+Now set it up with the following code in your package.json, then you are ready to start using Enzyme utilities. Most of the users use Shallow Renderer from Enzyme to do unit testings. The following link provides tutorial from React Native documentation. https://reactjs.org/docs/shallow-renderer.html
+```bash
+  {
+    ...,
+    "jest": {
+      ...,
+      "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+      "setupFiles": ["enzyme-react-16-adapter-setup"]
+    }
+  }
+```
+
 ### What CI platform(s) are they using (e.g. Travis-CI, AppVeyor)?
 
 AppVeyor.
