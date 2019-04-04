@@ -85,7 +85,15 @@ Custom Native Modules - Apart from the threads spawned by React Native, we can a
 
 ### What architectural patterns are used
 
+![alt text](https://github.com/ec500-software-engineering/case-study-alexlin0625/blob/master/ang2-react-native.png)
 
+Angular 2’s architecture makes it possible to render an application with various renderers including React Native. 
+
+As mentioned before, a React Native application runs 3 threads. The main one is a JS thread where any JS code can be executed; it controls the full application. The other two run the native part of the application: the standard main UI thread, and a “shadow” thread where measuring and layout occur.
+
+The native and JS sides communicate in both directions through a bridge. This means that there are Bridge JS APIs to access native features (network, geolocation, clipboard, etc) and  manipulate native elements, and that native events are sent back to the JS side.
+
+Overall, React Native can be considered as a set of React components, where each component represents the corresponding native views and components. There isn't specific architectural pattern is used. There are abundance of APIs for you to add as components and the results are presented directly as UI. It's very flexible and creative mobile app development. 
 
 ### Does the project lean more towards object oriented or functional components
 
