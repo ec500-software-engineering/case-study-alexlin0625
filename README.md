@@ -71,15 +71,25 @@ AppVeyor.
 # Software architecture
 ### How would you add / edit functionality if you wanted to? How would one use this project from external projects, or is it only usable as a standalone program?
 
+In React Native, you will be implementing or adding a lot of components, everything that are showing on your App could be some sort of components. For example, to add and show google map functionality is basically adding an React Native Map API originated from airbnb. Once you obtained the google map API credential, you could just add the entire map package into React Native as component. Then this is basically adding functionality to your React Native app. All components added are required to go through render to return the results. 
+
 ### What parts of the software are asynchronous (if any)?
 
-Please make diagrams as appropriate for your explanation
+When a React Native application is launched, it spawns up the following threading queues.
 
-### How are separation of concerns and information hiding handled?
+Main thread (Native Queue) - This is the main thread which gets spawned as soon as the application launches. It loads the app and starts the JS thread to execute the Javascript code. The native thread also listens to the UI events like 'press', 'touch', etc. These events are then passed to the JS thread via the RN Bridge. Once the Javascript loads, the JS thread sends the information on what needs to be rendered onto the screen. This information is used by a shadow node thread to compute the layouts. The shadow thread is basically like a mathematical engine which finally decides on how to compute the view positions. These instructions are then passed back to the main thread to render the view.
+
+Javascript thread (JS Queue) - The Javascript Queue is the thread queue where main bundled JS thread runs. The JS thread runs all the business logic, i.e., the code we write in React Native.
+
+Custom Native Modules - Apart from the threads spawned by React Native, we can also spawn threads on the custom native modules we build to speed up the performance of the application. For example - Animations are handled in React Native by a separate native thread to offload the work from the JS thread.
 
 ### What architectural patterns are used
 
+
+
 ### Does the project lean more towards object oriented or functional components
+
+The project lean more towards functional components. Even though asynchronous rendering with React was strictly stuck by using class which is object oriented. But with the new Suspense API in React Native, this is not an issue anymore, functional components can now perform asynchronous calls and render data that comes from them. It basically suspends the rendering of a component while loading data from a cache. This means that our component will only show up once the whole tree is ready.
 
 # Analyze two defects in the project
 ### Does the issue require an architecture change, or is it just adding a new function or?
