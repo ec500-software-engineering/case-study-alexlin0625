@@ -17,9 +17,46 @@ There's no doubt I'd choose to use Java and JavaScript to run on React Native ev
 Picture aboves illustrates that React Native uses the same React.js framework, but writing for Android vs iOS are actually different projects with some shared code, as mentioned before, it's in different folders within your React Native App project. This also means code for each device can be written specifically for that device using entirely native components.
 
 ### What build system is used (e.g. Bazel, CMake, Meson)? What build tools / environment are needed to build (e.g. does it require Visual Studio or just GCC or ?)
+There are two tools to build the React Native developing environment:
 
-Expo CLI -> direct shoot to iphone.
-Visual Studio for app code, Android Studio for emulator -> because I do not have an andriod phone.
+#### Expo CLI
+the easiest way to get started with React Native is with Expo tools because they allow you to start a project without installing and configuring Xcode or Android Studio. Expo CLI sets up a development environment on your local machine and you can be writing a React Native app within minutes. To install Expo CLI, use the following command.
+```bash
+npm install -g expo-cli
+```
+After you installed the Expo CLI, run the following command to create a project, the name is dafault AwesomeProject.
+
+```bash
+expo init AwesomeProject
+cd AwesomeProject
+npm start
+```
+After the project is created. Install "the Expo client" app on your iOS or Android phone and connect to the same wireless network as your computer. On Android, use the Expo app to scan the QR code from your terminal to open your project. On iOS, follow on-screen instructions to get a link.
+
+#### React Native CLI
+The instructions of this build tool differs depends on your Development OS and Target OS. So far React Native allows macOS, Windows and Linux as development OS. The target OS would be either iOS or Android. I'll introduce the build tools and environment needed to run Andriod App on Windows 10.
+1. Node & Python 2 & JDK: 
+Node.js for React Native command line interface. React Native also requires recent version of Java SDK as well as Python2.  
+2. Install Android Studio: 
+For Android development environment as well as Android Virtual Emulator. Alternatively, can also use Vitual Studio Code for both Java & JavaScript for code editing. 
+3. Android SDK: requires 
+Android 9 (Pie) to build React Native app with native code. 
+
+Detailed environment variable, path and software configurations have complete guide at the following.
+https://facebook.github.io/react-native/docs/getting-started
+
+Run:
+1. Create new application:
+```bash
+react-native init AwesomeProject
+```
+2. Run Android virtual Emulator: 
+list of available Android Virtual Devices (AVDs) by opening the "AVD Manager" from within Android Studio.
+3. Direct to the project created and run:
+```bash
+cd AwesomeProject
+react-native run-android
+```
 
 ### What frameworks / libraries are used in the project? At least one of these projects don’t use any external libraries or explicit threading, yet is noted for being the fastest in its category--in that case, what intrinsic language techniques is it using to get this speed.
 
