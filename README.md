@@ -35,12 +35,9 @@ After the project is created. Install "the Expo client" app on your iOS or Andro
 
 #### React Native CLI
 The instructions of this build tool differs depends on your Development OS and Target OS. So far React Native allows macOS, Windows and Linux as development OS. The target OS would be either iOS or Android. I'll introduce the build tools and environment needed to run Andriod App on Windows 10.
-1. Node & Python 2 & JDK: 
-Node.js for React Native command line interface. React Native also requires recent version of Java SDK as well as Python2.  
-2. Install Android Studio: 
-For Android development environment as well as Android Virtual Emulator. Alternatively, can also use Vitual Studio Code for both Java & JavaScript for code editing. 
-3. Android SDK: requires 
-Android 9 (Pie) to build React Native app with native code. 
+1. Node & Python 2 & JDK: Node.js for React Native command line interface. React Native also requires recent version of Java SDK as well as Python2.  
+2. Install Android Studio: For Android development environment as well as Android Virtual Emulator. Alternatively, can also use Vitual Studio Code for both Java & JavaScript for code editing. 
+3. Android SDK: requires Android 9 (Pie) to build React Native app with native code. 
 
 Detailed environment variable, path and software configurations have complete guide at the following.
 https://facebook.github.io/react-native/docs/getting-started
@@ -50,8 +47,8 @@ Run:
 ```bash
 react-native init AwesomeProject
 ```
-2. Run Android virtual Emulator: 
-list of available Android Virtual Devices (AVDs) by opening the "AVD Manager" from within Android Studio.
+2. Run Android virtual Emulator: list of available Android Virtual Devices (AVDs) by opening the "AVD Manager" from within Android Studio.
+
 3. Direct to the project created and run:
 ```bash
 cd AwesomeProject
