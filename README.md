@@ -119,9 +119,11 @@ Now set it up with the following code in your package.json, then you are ready t
 
 ### What CI platform(s) are they using (e.g. Travis-CI, AppVeyor)?
 
-AppVeyor.
+According to the Facebook's React Native github, both AppVeyor and Circle CI platforms were included but as I inspected, the CI platform leans towards Circle CI more. Circle is their continuous integration service provider. You can see the overall status of React Native's builds at https://circleci.com/gh/facebook/react-native.
 
 ### What computing platform combinations are tested on their CI? E.g. Windows 10, Cygwin, Linux, Mac, GCC, Clang
+
+Circle CI testing basically can do all testing jobs on majority of the systems. Either from Mac, Windows, Linux and other computing platform combinations. 
 
 # Software architecture
 ### How would you add / edit functionality if you wanted to? How would one use this project from external projects, or is it only usable as a standalone program?
@@ -154,7 +156,7 @@ Overall, React Native can be considered as a set of React components, where each
 
 The project lean more towards functional components. Even though asynchronous rendering with React was strictly stuck by using class which is object oriented. But with the new Suspense API in React Native, this is not an issue anymore, functional components can now perform asynchronous calls and render data that comes from them. It basically suspends the rendering of a component while loading data from a cache. This means that our component will only show up once the whole tree is ready.
 
-# Analyze two defects in the project
+# Defects 
 ### Does the issue require an architecture change, or is it just adding a new function or?
 
 ### make a patch / pull request for the project to fix problem / add feature
