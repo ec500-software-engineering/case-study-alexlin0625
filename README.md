@@ -157,9 +157,11 @@ Overall, React Native can be considered as a set of React components, where each
 The project lean more towards functional components. Even though asynchronous rendering with React was strictly stuck by using class which is object oriented. But with the new Suspense API in React Native, this is not an issue anymore, functional components can now perform asynchronous calls and render data that comes from them. It basically suspends the rendering of a component while loading data from a cache. This means that our component will only show up once the whole tree is ready.
 
 # Defects 
-### Does the issue require an architecture change, or is it just adding a new function or?
+### Native Language Dependency
+Through the research, I figured that all the functionalities or API components are written as native modules. These native modules need to be written in Java and swift/objective c. Therefore, if the functionality or API component isn't currently available in React Native, it could negate the point of cross-platform development as you still need some native engineers to help.   
 
-### make a patch / pull request for the project to fix problem / add feature
+### Native Modules Auto-Linking
+[ISSUE#24099](https://github.com/facebook/react-native/pull/24099) This issue addressed that template change required to enable native modules auto-linking for both Android & iOS. The problem seems like the native modules cannot be auto-linked to both Android & iOS while creating a new project. The best pro for React Native is the crossplatform development, then this issue shouldn't occur. CircleCI currently still fails on the iOS test.  
 
 # Demonstration application of the system
 Since react-native provide broad API interfaces. I'd like to do a demo by accessing Goolge map in my react native app on an Android simulator. Before start doing this application, obtaining google cloud platform account and Google Map API key is needed. Also make sure the <Maps SDK for Android> API was enabled in google cloud platform.
